@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Player {
+    Random r = new Random();
+
     private final String name;
     private int score;
     private Actions hand;
@@ -44,7 +46,6 @@ public class Player {
     }
 
     public void drawRandomHand() {
-        Random r = new Random();
         printHand(Actions.values()[(r.nextInt(Actions.values().length))]);
     }
 

@@ -1,5 +1,6 @@
 package entitiy;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Player {
@@ -43,7 +44,8 @@ public class Player {
     }
 
     public void drawRandomHand() {
-        printHand(Actions.values()[(int)(Math.random() * Actions.values().length)]);
+        Random r = new Random();
+        printHand(Actions.values()[(r.nextInt(Actions.values().length))]);
     }
 
     public void drawHand() {
